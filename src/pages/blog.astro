@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
 
 const pageTitle = "Blog - juanT"
@@ -70,7 +71,8 @@ const cardColor = "#ffa0a6"
 			article h2 {
 				margin: 0;
 
-				font-size: 1.5rem;
+				font-size: 1.4rem;
+				font-weight: 700;
 			}
 
 			article p {
@@ -81,6 +83,7 @@ const cardColor = "#ffa0a6"
     </style>
 	</head>
 	<body>
+		<Navigation />
 		<section>
 			<h1>Blog</h1>
 			<p>Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones donde ocurra, de mis aciertos. Opiniones 100% mías, no representan a nadie más que a mi persona.</p>
@@ -88,9 +91,9 @@ const cardColor = "#ffa0a6"
 		<section>
 			<ul>
 				<li>
-					<a href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software">
+					<a href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software/">
 						<article>
-							<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software</h2>
+							<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software?</h2>
 							<p>Una oferta, una caja de texto y una pregunta flotando sobre el ambiente. ¿Superaré el desafío?</p>
 						</article>
 					</a>

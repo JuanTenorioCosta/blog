@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
 
 const pageTitle = "juanT"
@@ -15,6 +16,7 @@ const pageDescription = "Hola, soy Juan Tenorio, ingeniero de software con dos a
 		<meta name="description" content={pageDescription} />
 	</head>
 	<body>
+		<Navigation />
 		<section>
 			<h1>Hola, soy <span class="resaltado">Juan Tenorio</span></h1>
 			<h3>Software Engineer</h3>
@@ -23,12 +25,12 @@ const pageDescription = "Hola, soy Juan Tenorio, ingeniero de software con dos a
 			<p>Tengo dos años de experiencia construyendo soluciones full-stack para distintos clientes.</p>
 			<p>Estoy buscando una oportunidad en una empresa donde especializarme, aprender, crecer y ojalá pasar mucho tiempo juntos.</p>
 			<p>Mi especialidad actual es JavaScript, NodeJS y metaframeworks asociados como NextJS, Vite y Express.</p>
-			<p>Si quieres valorar darme esa oportunidad puedes consultar <a href="https://www.getmanfred.com/perfil/juantenoriocosta">CV online</a>.</p>
+			<p>Si quieres valorar darme esa oportunidad puedes consultar mi <a href="https://www.getmanfred.com/perfil/juantenoriocosta">CV online</a>.</p>
 		</section>
 		<footer>
       <p>© 2025 juanT</p>
       <p><a href="mailto:juantenoriocosta@gmail.com">Correo</a></p>
-      <p><a href="/blog">Ver el blog</a></p>
+      <p><a href="/blog/">Ver el blog</a></p>
     </footer>
 	</body>
 </html>
