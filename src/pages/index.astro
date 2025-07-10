@@ -1,5 +1,8 @@
 ---
+import '../styles/global.css'
 
+const pageTitle = "juanT"
+const pageDescription = "Hola, soy Juan Tenorio, ingeniero de software con dos años de experiencia. Busco una oportunidad para especializarme y crecer."
 ---
 
 <html lang="es">
@@ -8,18 +11,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>juanT</title>
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
 	</head>
 	<body>
 		<section>
-			<h1>Hola, soy <span class="resaltado">juanT</span></h1>
-			<p><span>Soy ingeniero de software</span><span>Soy curioso por naturaleza</span><span>Soy apasionado del deporte</span></p>
+			<h1>Hola, soy <span class="resaltado">Juan Tenorio</span></h1>
+			<h3>Software Engineer</h3>
 		</section>
 		<section>
-			<h2>¿Qué hago principalmente?</h2>
-			<p>Me dedico a la ingeniería de software y al desarrollo de soluciones para atajar problemas de alcance reducido.</p>
-			<p>En mi día a día pongo mucho cariño y cuidado normalmente al front de alguna web o aplicación.</p>
-			<p>A pesar de que normalmente dedico la mayoría de mi tiempo al front también diseño y programos las APIs y BBDDs que consumen en proyectos específicos</p>
+			<p>Tengo dos años de experiencia construyendo soluciones full-stack para distintos clientes.</p>
+			<p>Estoy buscando una oportunidad en una empresa donde especializarme, aprender, crecer y ojalá pasar mucho tiempo juntos.</p>
+			<p>Mi especialidad actual es JavaScript, NodeJS y metaframeworks asociados como NextJS, Vite y Express.</p>
+			<p>Si quieres valorar darme esa oportunidad puedes consultar <a href="https://www.getmanfred.com/perfil/juantenoriocosta">CV online</a>.</p>
 		</section>
 		<footer>
       <p>© 2025 juanT</p>

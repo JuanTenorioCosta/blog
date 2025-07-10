@@ -1,5 +1,10 @@
 ---
+import '../styles/global.css'
 
+const pageTitle = "Blog - juanT"
+const pageDescription = "Pequeño recopilatorio de mis fracasos, y en extrañas situaciones, mis aciertos."
+
+const cardColor = "#ffa0a6"
 ---
 
 <html lang="es">
@@ -8,22 +13,88 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog</title>
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
+		<style define:vars={{ cardColor }}>
+      h1 {
+				margin-bottom: 24px;
+        
+        font-size: 4rem;
+      }
+			
+			p {
+				margin-bottom: 0;
+
+				font-size: 1.2rem;
+			}
+
+			ul {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+				gap: 16px;
+
+				padding: 0;
+
+				list-style: none;
+			}
+
+			li {
+				display: flex;
+
+				transition: transform 0.2s ease-in-out;
+			}
+
+			li:hover {
+				transform: scale(1.05);
+			}
+
+			li a {
+				padding: 24px 32px;
+				border-radius: 16px;
+
+				background-color: var(--cardColor);
+
+				text-decoration: none;;
+			}
+
+			article {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+
+				text-decoration: none;
+
+				transition: transform 0.2s ease-in-out;
+			}
+
+			article h2 {
+				margin: 0;
+
+				font-size: 1.5rem;
+			}
+
+			article p {
+				margin: 0;
+
+				font-size: 1.2rem;
+			}
+    </style>
 	</head>
 	<body>
 		<section>
 			<h1>Blog</h1>
-			<p>Aquí podrás encontrar desde consejos, trucos o soluciones que he aplicado y quiero mantener aquí en mi vida laboral como mi perspectiva en artículos de opinión sobre acontecimientos deportivos o generales.</p>
+			<p>Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones donde ocurra, de mis aciertos. Opiniones 100% mías, no representan a nadie más que a mi persona.</p>
 		</section>
 		<section>
-			<article>
-        <h2>Título de mi artículo número 1</h2>
-        <p>Pequeña descripción del artículo 1</p>
-      </article>
-      <article>
-        <h2>Título de mi artículo número 2</h2>
-        <p>Pequeña descripción del artículo 2</p>
-      </article>
+			<ul>
+				<li>
+					<a href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software">
+						<article>
+							<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software</h2>
+							<p>Una oferta, una caja de texto y una pregunta flotando sobre el ambiente. ¿Superaré el desafío?</p>
+						</article>
+					</a>
+			</ul>
 		</section>
     <footer>
       <p>© 2025 juanT</p>
