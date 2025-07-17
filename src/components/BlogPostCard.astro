@@ -1,0 +1,43 @@
+---
+const {link, title, intro} = Astro.props
+---
+
+<style>
+  a {
+    padding: 24px 32px;
+    border-radius: 16px;
+
+    background-color: #ffa0a6;
+
+    text-decoration: none;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease-in-out;
+  }
+
+  article h2 {
+    margin: 0;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  article p {
+    margin: 0;
+
+    font-size: 1.2rem;
+  }
+</style>
+<a href={link}>
+  <article>
+    <h2>{title}</h2>
+    <p>{intro}</p>
+  </article>
+</a>

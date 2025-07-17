@@ -1,18 +1,17 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import BlogPostCard from "../components/BlogPostCard.astro";
 
-const cardColor = "#ffa0a6";
+const allBlogPosts = Object.values(import.meta.glob('./blog/*.md', { eager: true }))
 ---
 
 <PageLayout
 	title="Blog"
 	metadescription="Pequeño recopilatorio de mis fracasos, y en extrañas situaciones, mis aciertos."
 >
-	<style define:vars={{ cardColor }}>
+	<style>
 		h1 {
 			margin-bottom: 24px;
-
-			font-size: 4rem;
 		}
 
 		p {
@@ -40,41 +39,9 @@ const cardColor = "#ffa0a6";
 		li:hover {
 			transform: scale(1.05);
 		}
-
-		li a {
-			padding: 24px 32px;
-			border-radius: 16px;
-
-			background-color: var(--cardColor);
-
-			text-decoration: none;
-		}
-
-		article {
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-
-			text-decoration: none;
-
-			transition: transform 0.2s ease-in-out;
-		}
-
-		article h2 {
-			margin: 0;
-
-			font-size: 1.4rem;
-			font-weight: 700;
-		}
-
-		article p {
-			margin: 0;
-
-			font-size: 1.2rem;
-		}
 	</style>
 	<section>
-		<h1>Blog</h1>
+		<h1>Recopilatorio de mis historias</h1>
 		<p>
 			Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones
 			donde ocurra, de mis aciertos. Opiniones 100% mías, no representan a nadie
@@ -83,19 +50,11 @@ const cardColor = "#ffa0a6";
 	</section>
 	<section>
 		<ul>
-			<li>
-				<a
-					href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software/"
-				>
-					<article>
-						<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software?</h2>
-						<p>
-							Una oferta, una caja de texto y una pregunta flotando sobre el
-							ambiente. ¿Superaré el desafío?
-						</p>
-					</article>
-				</a>
-			</li>
+			{allBlogPosts.sort( (a: any, b: any) => b.frontmatter.pubDate - a.frontmatter.pubDate ).map( (post: any) => (
+				<li>
+					<BlogPostCard link={post.url} title={post.frontmatter.title} intro={post.frontmatter.intro} />
+				</li>
+			) )}
 		</ul>
 	</section>
 </PageLayout>

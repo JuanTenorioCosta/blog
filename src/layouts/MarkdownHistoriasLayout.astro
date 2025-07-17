@@ -5,10 +5,9 @@ const {frontmatter} = Astro.props
 ---
 <style>
   article {
-    max-width: 850px;
+    max-width: 800px;
 
     margin: 0 auto;
-    padding: 16px;
   }
 
   p {
@@ -26,15 +25,21 @@ const {frontmatter} = Astro.props
     list-style-type: none;
   }
 
-  li {
-    padding: 4px 12px;
+  a {
+    display: block;
+
+    padding: 8px 16px;
     border-radius: 24px;
 
+    font-size: .75em;
+
     background-color: #ffa0a6;
+
+    transition: transform .2s, color .2s;
   }
 
-  span {
-    font-size: .75em;
+  a:hover {
+    transform: scale(1.1);
   }
 </style>
 <PageLayout title={frontmatter.title} metadescription={frontmatter.description}>
@@ -42,10 +47,10 @@ const {frontmatter} = Astro.props
     <h1>{frontmatter.title}</h1>
     <p>Publicado en: {new Date(frontmatter.pubDate).toLocaleDateString()}</p>
     <ul>
-      { frontmatter.tags.map( (tag: string) => (<li><span>{tag}</span></li>) ) }
+      { frontmatter.tags.map( (tag: string) => (<li><a href={`/tags/${tag.replace(' ', '-')}`}>{tag}</a></li>) ) }
     </ul>
     <article>
       <slot />
     </article>
   </section>
-<PageLayout />
+</PageLayout>

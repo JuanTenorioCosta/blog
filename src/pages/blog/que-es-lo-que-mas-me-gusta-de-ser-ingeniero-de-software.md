@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownHistoriasLayout.astro
 title: 'Qué es lo que más me gusta de ser Ingeniero de Software'
 pubDate: 2025-07-10
+intro: 'Una oferta, una caja de texto y una pregunta flotando sobre el ambiente. ¿Superaré el desafío?'
 description: 'Historia de porque soy ingeniero de software y qué es lo que más me gusta de la profesión.'
 tags: ["software engineer", "buscar trabajo", "anécdotas"]
 ---
@@ -26,7 +27,7 @@ Me quede mirando a la pantalla, sin más ni más, preguntándome que era lo que 
 
 ## Vamoh a darle
 
-Esta es una frase que dice mucho un entrenador de baloncesto (deporte que me encanta y practico) en youtube y que me encanta. Es simplemente hacer las cosas, no por hacerlas bien, si no por hacerlas. Apuntarse a un bombardeo. Hacer por hacer. Vivir por vivir.
+Esta es una frase que dice mucho un entrenador de baloncesto (deporte que adoro y practico) en youtube y que me encanta. Es simplemente hacer las cosas, no por hacerlas bien, si no por hacerlas. Apuntarse a un bombardeo. Hacer por hacer. Vivir por vivir.
 
 Ese sentimiento es el que me encandiló de la informática, del software. En otros campos de ingeniería el proceso está centrado en saber y luego aplicar. Vamoh a pensar, pero yo no quería eso. Lo que me gusta de lo que hago es el salto al vacío de la solución, la capacidad de desmontar y montar sistemas enteros de los que pueden depender multinacionales en cuestión de minutos o segundos es algo que da una agilidad a nuestro campo que no tiene ninguna otra ingeniería.
 
