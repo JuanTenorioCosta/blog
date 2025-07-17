@@ -1,108 +1,101 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import '../styles/global.css'
+import PageLayout from "../layouts/PageLayout.astro";
 
-const pageTitle = "Blog - juanT"
-const pageDescription = "Pequeño recopilatorio de mis fracasos, y en extrañas situaciones, mis aciertos."
-
-const cardColor = "#ffa0a6"
+const cardColor = "#ffa0a6";
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<meta name="description" content={pageDescription} />
-		<style define:vars={{ cardColor }}>
-      h1 {
-				margin-bottom: 24px;
-        
-        font-size: 4rem;
-      }
-			
-			p {
-				margin-bottom: 0;
+<PageLayout
+	title="Blog"
+	metadescription="Pequeño recopilatorio de mis fracasos, y en extrañas situaciones, mis aciertos."
+>
+	<style define:vars={{ cardColor }}>
+		h1 {
+			margin-bottom: 24px;
 
-				font-size: 1.2rem;
-			}
+			font-size: 4rem;
+		}
 
-			ul {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
-				gap: 16px;
+		p {
+			margin-bottom: 0;
 
-				padding: 0;
+			font-size: 1.2rem;
+		}
 
-				list-style: none;
-			}
+		ul {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+			gap: 16px;
 
-			li {
-				display: flex;
+			padding: 0;
 
-				transition: transform 0.2s ease-in-out;
-			}
+			list-style: none;
+		}
 
-			li:hover {
-				transform: scale(1.05);
-			}
+		li {
+			display: flex;
 
-			li a {
-				padding: 24px 32px;
-				border-radius: 16px;
+			transition: transform 0.2s ease-in-out;
+		}
 
-				background-color: var(--cardColor);
+		li:hover {
+			transform: scale(1.05);
+		}
 
-				text-decoration: none;;
-			}
+		li a {
+			padding: 24px 32px;
+			border-radius: 16px;
 
-			article {
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
+			background-color: var(--cardColor);
 
-				text-decoration: none;
+			text-decoration: none;
+		}
 
-				transition: transform 0.2s ease-in-out;
-			}
+		article {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
 
-			article h2 {
-				margin: 0;
+			text-decoration: none;
 
-				font-size: 1.4rem;
-				font-weight: 700;
-			}
+			transition: transform 0.2s ease-in-out;
+		}
 
-			article p {
-				margin: 0;
+		article h2 {
+			margin: 0;
 
-				font-size: 1.2rem;
-			}
-    </style>
-	</head>
-	<body>
-		<Navigation />
-		<section>
-			<h1>Blog</h1>
-			<p>Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones donde ocurra, de mis aciertos. Opiniones 100% mías, no representan a nadie más que a mi persona.</p>
-		</section>
-		<section>
-			<ul>
-				<li>
-					<a href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software/">
-						<article>
-							<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software?</h2>
-							<p>Una oferta, una caja de texto y una pregunta flotando sobre el ambiente. ¿Superaré el desafío?</p>
-						</article>
-					</a>
-			</ul>
-		</section>
-    <footer>
-      <p>© 2025 juanT</p>
-      <p><a href="mailto:juantenoriocosta@gmail.com">Correo</a></p>
-      <p><a href="/">Volver al inicio</a></p>
-    </footer>
-	</body>
-</html>
+			font-size: 1.4rem;
+			font-weight: 700;
+		}
+
+		article p {
+			margin: 0;
+
+			font-size: 1.2rem;
+		}
+	</style>
+	<section>
+		<h1>Blog</h1>
+		<p>
+			Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones
+			donde ocurra, de mis aciertos. Opiniones 100% mías, no representan a nadie
+			más que a mi persona.
+		</p>
+	</section>
+	<section>
+		<ul>
+			<li>
+				<a
+					href="/mishistorias/que-es-lo-que-mas-me-gusta-de-ser-ingeniero-de-software/"
+				>
+					<article>
+						<h2>¿Qué es lo que más me gusta de ser Ingeniero de Software?</h2>
+						<p>
+							Una oferta, una caja de texto y una pregunta flotando sobre el
+							ambiente. ¿Superaré el desafío?
+						</p>
+					</article>
+				</a>
+			</li>
+		</ul>
+	</section>
+</PageLayout>

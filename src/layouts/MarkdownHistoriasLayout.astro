@@ -1,0 +1,51 @@
+---
+import PageLayout from "./PageLayout.astro"
+
+const {frontmatter} = Astro.props
+---
+<style>
+  article {
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+    margin: 0;
+    padding: 16px 0;
+
+    list-style-type: none;
+  }
+
+  li {
+    padding: 4px 12px;
+    border-radius: 24px;
+
+    background-color: #ffa0a6;
+  }
+
+  span {
+    font-size: .75em;
+  }
+</style>
+<PageLayout title={frontmatter.title} metadescription={frontmatter.description}>
+  <section>
+    <h1>{frontmatter.title}</h1>
+    <p>Publicado en: {new Date(frontmatter.pubDate).toLocaleDateString()}</p>
+    <ul>
+      { frontmatter.tags.map( (tag: string) => (<li><span>{tag}</span></li>) ) }
+    </ul>
+    <article>
+      <slot />
+    </article>
+  </section>
+<PageLayout />

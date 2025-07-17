@@ -1,16 +1,10 @@
 ---
+layout: ../../layouts/MarkdownHistoriasLayout.astro
 title: 'Qué es lo que más me gusta de ser Ingeniero de Software'
 pubDate: 2025-07-10
 description: 'Historia de porque soy ingeniero de software y qué es lo que más me gusta de la profesión.'
-author: 'Juan Tenorio'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["software engineer", "curiosidades", "aprender en público"]
+tags: ["software engineer", "buscar trabajo", "anécdotas"]
 ---
-# Qué es lo que más me gusta de ser Ingeniero de Software
-
-Publicado en: 2025-07-10
 
 Que esta historia sea mi primera entrada no sé si es buena o mala idea. Lo cierto es que representa muy bien lo que quiero que sea este blog. Un pequeño recopilatorio de mis fracasos, y en esas extrañas situaciones donde ocurra, de mis aciertos.
 

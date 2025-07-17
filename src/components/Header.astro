@@ -1,0 +1,26 @@
+---
+import Navigation from "./Navigation.astro"
+---
+<style>
+  header {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+
+    max-width: 90vw;
+
+    padding: 8px 32px;
+    border-radius: 24px;
+
+    background-color: #ffa0a6;
+
+    transform: translateX(-50%);
+  }
+</style>
+<header>
+  <Navigation />
+</header>

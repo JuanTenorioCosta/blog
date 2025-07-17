@@ -1,36 +1,31 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import '../styles/global.css'
-
-const pageTitle = "juanT"
-const pageDescription = "Hola, soy Juan Tenorio, ingeniero de software con dos años de experiencia. Busco una oportunidad para especializarme y crecer."
+import PageLayout from "../layouts/PageLayout.astro"
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<meta name="description" content={pageDescription} />
-	</head>
-	<body>
-		<Navigation />
-		<section>
-			<h1>Hola, soy <span class="resaltado">Juan Tenorio</span></h1>
-			<h3>Software Engineer</h3>
-		</section>
-		<section>
-			<p>Tengo dos años de experiencia construyendo soluciones full-stack para distintos clientes.</p>
-			<p>Estoy buscando una oportunidad en una empresa donde especializarme, aprender, crecer y ojalá pasar mucho tiempo juntos.</p>
-			<p>Mi especialidad actual es JavaScript, NodeJS y metaframeworks asociados como NextJS, Vite y Express.</p>
-			<p>Si quieres valorar darme esa oportunidad puedes consultar mi <a href="https://www.getmanfred.com/perfil/juantenoriocosta">CV online</a>.</p>
-		</section>
-		<footer>
-      <p>© 2025 juanT</p>
-      <p><a href="mailto:juantenoriocosta@gmail.com">Correo</a></p>
-      <p><a href="/blog/">Ver el blog</a></p>
-    </footer>
-	</body>
-</html>
+<PageLayout
+	title="Inicio"
+	metadescription="Hola, soy Juan Tenorio, ingeniero de software con dos años de experiencia. Busco una oportunidad para especializarme y crecer."
+>
+	<section>
+		<h1>Hola, soy <span class="resaltado">Juan Tenorio</span></h1>
+		<h3>Software Engineer</h3>
+	</section>
+	<section>
+		<p>
+			Tengo varios años de experiencia laboral y educativa construyendo
+			soluciones full-stack para distintos clientes.
+		</p>
+		<p>
+			Estoy buscando una oportunidad en una empresa donde especializarme,
+			aprender, crecer y ojalá pasar mucho tiempo juntos.
+		</p>
+		<p>
+			Mi especialidad actual es JavaScript, NodeJS y metaframeworks asociados
+			como NextJS, Vite y Express.
+		</p>
+		<p>
+			Si quieres valorar darme esa oportunidad puedes consultar mi 
+			<a href="https://www.getmanfred.com/perfil/juantenoriocosta">CV online</a>.
+		</p>
+	</section>
+</PageLayout>

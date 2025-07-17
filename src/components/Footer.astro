@@ -1,0 +1,55 @@
+---
+import Link from "./Link.astro"
+
+const links = [
+  {
+    href: 'https://github.com/JuanTenorioCosta',
+    text: 'GitHub'
+  },
+  {
+    href: 'https://www.linkedin.com/in/juan-tenorio-costa-63a83624b/',
+    text: 'LinkedIn'
+  },
+  {
+    href: 'https://www.getmanfred.com/perfil/juantenoriocosta',
+    text: 'CV Online'
+  },
+  {
+    href: 'mailto:juantenoriocosta@gmail.com',
+    text: 'Correo'
+  }
+]
+---
+<style>
+  footer {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+
+    margin: auto 0 0;
+    padding: 32px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+</style>
+<footer>
+  <ul>
+    {links.map(({ href, text }) => (
+      <li><Link link={href} text={text} target="_blank" /></li>
+    ))}
+  </ul>
+</footer>
